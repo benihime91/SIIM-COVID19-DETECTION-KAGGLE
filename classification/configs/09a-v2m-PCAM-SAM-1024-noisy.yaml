@@ -13,7 +13,7 @@ INPUT:
   INPUT_SIZE: 1024
   NUM_CHANNELS: 3
   NUM_CLASSES: 4
-  TRAIN_AUGS: augs/augs-01.json
+  TRAIN_AUGS: augs/augs-02.json
 
 MODEL:
   USE_MISH: true
