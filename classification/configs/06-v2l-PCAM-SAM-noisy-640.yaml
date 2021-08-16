@@ -1,0 +1,78 @@
+SEED: 42
+RUN_NAME: exp6
+PATH_CSV: data/train_stratified_group_5xfolds_clean.csv
+PATH_IMAGES: data/train
+PATH_MASK: data/masks/
+NOISY_CSV: data/noisy/exp1.csv
+CHECKPOINT: null
+
+DATALOADER:
+  BATCH_SIZE: 20
+  NUM_WORKERS: 8
+
+INPUT:
+  DRAW_OVERLAY: false
+  INPUT_SIZE: 640
+  NUM_CHANNELS: 3
+  NUM_CLASSES: 4
+  TRAIN_AUGS: augs/augs-02.json
+
+MODEL:
+  USE_MISH: true
+  AUX_MODEL:
+    VERSION: v1
+  BACKBONE:
+    DROP_PATH: 0.4
+    INIT_ARGS:
+      global_pool: ''
+      num_classes: 0
+    NAME: tf_efficientnetv2_l_in21ft1k
+    PRETRAINED: true
+  HEAD:
+    ATTENTION_MAP: SAM
+    DROPOUT: 0.5
+    NAME: pcam
+  SEG_HEAD:
+    LIN_FTRS: 168
+  
+
+TRAINER:
+  accumulate_grad_batches: 1
+  gpus: 1
+  gradient_clip_algorithm: norm
+  gradient_clip_val: 1.0
+  limit_train_batches: 1.0
+  log_every_n_steps: 5
+  max_epochs: 25
+  num_sanity_val_steps: 0
+  precision: 16
+  stochastic_weight_avg: false
+  terminate_on_nan: true
+
+TRAINING:
+  AUX_LOSS: true
+  LOSS:
+    CLASS_LOSS: bce_loss
+    COMBO_LOSS:
+      USE: true
+      L1: lovasz_loss
+      L2: bce_loss
+      WEIGHTS:
+      - 0.75
+      - 0.25
+    MASK_LOSS: bce_loss
+  OPTIMIZER:
+    BETAS:
+    - 0.95
+    - 0.999
+    EPS: 1.0e-05
+    LR: 0.0003
+    NAME: Ranger
+    USE_SAM: false
+    WEIGHT_DECAY: 0.01
+  SCHEDULER:
+    EPOCHS: 25
+    MAX_LR: 0.0003
+    NAME: Cosine
+    WARMDOWN_PCT: 0.0
+    WARMUP_EPOCHS: 0

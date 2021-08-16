@@ -1,0 +1,12 @@
+torch==1.8.1
+torchvision==0.9.1
+mish-cuda==0.0.3
+pytorch-lightning==1.3.8
+pytorch-toolbelt @ git+https://github.com/BloodAxe/pytorch-toolbelt.git@06af70fc9a406a39eab46785184ed28c4fb09831
+ranger @ git+https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer@c82a30460684c7301086d84185a1927b1c256afa
+ranger21 @ git+https://github.com/lessw2020/Ranger21.git@4e2dff8e9e44493ec0042f8e0d9621a5999b183f
+timm @ git+https://github.com/rwightman/pytorch-image-models.git@02aaa785b97af5cbf22295033b4d3cc0137d8553
+torchmetrics==0.4.1
+tqdm==4.61.1
+fvcore==0.1.5.post20210609
+yacs==0.1.8

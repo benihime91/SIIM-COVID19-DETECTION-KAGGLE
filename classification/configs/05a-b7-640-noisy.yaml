@@ -1,0 +1,77 @@
+SEED: 42
+RUN_NAME: exp5a
+PATH_CSV: data/train_stratified_group_5xfolds_clean.csv
+PATH_IMAGES: data/train
+PATH_MASK: data/masks/
+CHECKPOINT: data/noisy/exp5
+
+DATALOADER:
+  BATCH_SIZE: 32
+  NUM_WORKERS: 8
+
+INPUT:
+  INPUT_SIZE: 640
+  NUM_CHANNELS: 3
+  NUM_CLASSES: 4
+  TRAIN_AUGS: augs/augs-01.json
+
+MODEL:
+  USE_MISH: false
+  AUX_MODEL:
+    VERSION: v1
+  BACKBONE:
+    DROP_PATH: 0.4
+    INIT_ARGS:
+      global_pool: ''
+      num_classes: 0
+    NAME: tf_efficientnet_b7_ns
+    PRETRAINED: true
+  HEAD:
+    ATTENTION_MAP: sCSE
+    DROPOUT: 0.5
+    NAME: multi_head
+    POOLING: avg
+  SEG_HEAD:
+    LIN_FTRS: 168
+    RESIDUAL: false
+
+TRAINER:
+  accumulate_grad_batches: 1
+  gpus: 1
+  gradient_clip_algorithm: norm
+  gradient_clip_val: 1.0
+  limit_train_batches: 1.0
+  log_every_n_steps: 5
+  max_epochs: 20
+  num_sanity_val_steps: 0
+  precision: 16
+  stochastic_weight_avg: false
+  terminate_on_nan: true
+
+TRAINING:
+  AUX_LOSS: true
+  AUX_LOSS_WEIGHT: 1.0
+  EMA: false
+  LOSS:
+    CLASS_LOSS: bce_loss
+    COMBO_LOSS:
+      L1: lovasz_loss
+      L2: bce_loss
+      USE: true
+      WEIGHTS:
+      - 0.75
+      - 0.25
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    LR: 0.0003
+    NAME: AdamW
+    WEIGHT_DECAY: 0.01
+  SCHEDULER:
+    EPOCHS: 20
+    MAX_LR: 0.0003
+    NAME: OneCycle
+    WARMDOWN_PCT: 0.0
+    WARMUP_EPOCHS: 0
