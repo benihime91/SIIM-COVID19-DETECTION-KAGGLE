@@ -10,3 +10,4 @@ torchmetrics==0.4.1
 tqdm==4.61.1
 fvcore==0.1.5.post20210609
 yacs==0.1.8
+albumentations==1.0.3
