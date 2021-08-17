@@ -1,0 +1,17 @@
+data: data/grouped_df.csv
+root: data/images
+print_every: 50
+device: cuda
+bs: 12
+epochs: 10
+mosaic: 0.0 
+mixup: 0.0
+set_bn_eval: true
+lr: 1e-06
+initial_checkpoint: null
+output: runs/
+model: tf_efficientdet_d5_ap
+model_ema: false
+model_ema_decay: 0.998
+image_size: 512
+name: exp1a
