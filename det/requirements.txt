@@ -1,0 +1,8 @@
+torch==1.8.1
+torchvision==0.9.1
+timm @ git+https://github.com/rwightman/pytorch-image-models.git@02aaa785b97af5cbf22295033b4d3cc0137d8553
+pyyaml
+numpy
+pycocotools>=2.0.2
+omegaconf>=2.0
+albumentations==1.0.3
