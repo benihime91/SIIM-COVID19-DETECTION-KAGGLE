@@ -2,14 +2,14 @@
 
 
 ## Overview
-- Train efficientdet_d3 and efficientdet_d5 on training data. 
-- Generate pseudo labels on public test data using WBF ensemble on stage 1 effdet and yolov5 models.
-- Re-train efficientdet_d3 on public test + training data.
+- Train efficientdet_d3, efficientdet_d4, efficientdet_d5 on training data. 
+- Generate pseudo labels on public test data using WBF ensemble on stage 1 effdet models (d3, d4) and stage 1 yolov5 models.
+- Re-train efficientdet_d3 on public test (pseudo labels) + training data (original labels) .
 
 
 ## Details
 
-1. Download the images dataset from [here](https://www.kaggle.com/benihime91/siim-covid19-png-1024px). Extrach the images from both train and public test under `data/images/`
+1. Download the images dataset from [here](https://www.kaggle.com/benihime91/siim-covid19-png-1024px). Extract the images from both train and public test under `data/images/`, but be sure to keep the original `train/`, `test/`, `meta.csv` dirs and files. These will be used to generate pseudo labels.
 
 2. Install requirements
 
