@@ -1,14 +1,14 @@
 # train and val datasets (image directory or *.txt file with image paths)
 train:
-  - /home/shivgup/yolo/yolo/yolov5/data/covid/fold_1/images
-  - /home/shivgup/yolo/yolo/yolov5/data/covid/fold_0/images
-  - /home/shivgup/yolo/yolo/yolov5/data/covid/fold_3/images
-  - /home/shivgup/yolo/yolo/yolov5/data/covid/fold_4/images
-  - /home/shivgup/yolo/yolo/yolov5/data/covid/empty/images
-  - /home/shivgup/yolo/yolo/yolov5/data/covid/psuedo/images
+  - data/covid/fold_1/images
+  - data/covid/fold_0/images
+  - data/covid/fold_3/images
+  - data/covid/fold_4/images
+  - data/covid/empty/images
+  - data/covid/psuedo/images
 
-val: /home/shivgup/yolo/yolo/yolov5/data/covid/fold_2/images
-test: /home/shivgup/yolo/yolo/yolov5/data/covid/fold_2/images
+val: data/covid/fold_2/images
+test: data/covid/fold_2/images
 # number of classes
 nc: 1
 

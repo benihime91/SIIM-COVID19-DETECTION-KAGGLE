@@ -1,14 +1,12 @@
 # train and val datasets (image directory or *.txt file with image paths)
 train:
-  - data/covid/fold_0/images
+  - data/covid/fold_1/images
   - data/covid/fold_2/images
   - data/covid/fold_3/images
   - data/covid/fold_4/images
-  - data/covid/empty/images
-  - data/covid/psuedo/images
 
-val: data/covid/fold_1/images
-test: data/covid/fold_1/images
+val: data/covid/fold_0/images
+test: data/covid/fold_0/images
 # number of classes
 nc: 1
 
