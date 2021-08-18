@@ -1,0 +1,11 @@
+data
+├── images
+│   ├── train
+│   │   └── *.png
+│   ├── test
+│   │   └── *.png
+|
+├── annotations
+│   └── coco
+│   │   ├── train_annotations_fold0.json
+│   │   ├── *.json
