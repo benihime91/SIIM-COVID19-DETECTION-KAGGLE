@@ -1,0 +1,59 @@
+data
+├── hyps
+│   ├── params_stage1_model1.yaml
+│   ├── params_stage1_model2.yaml
+│   └── params_stage2.yaml
+|
+├── siim_data
+│   ├── fold_0
+│   |    ├── images
+│   |    │   └── *.png
+│   |    └── labels
+│   |        └── *.txt
+|   |
+│   ├── fold_1
+│   |    ├── images
+│   |    │   └── *.png
+│   |    └── labels
+│   |        └── *.txt
+|   |
+│   ├── fold_2
+│   |    ├── images
+│   |    │   └── *.png
+│   |    └── labels
+│   |        └── *.txt
+|   |
+│   ├── fold_3
+│   |    ├── images
+│   |    │   └── *.png
+│   |    └── labels
+│   |        └── *.txt
+|   |
+│   ├── fold_4
+│   |    ├── images
+│   |    │   └── *.png
+│   |    └── labels
+│   |        └── *.txt
+|   |
+│   ├── pseudo
+│   |    ├── images
+│   |    │   └── *.png
+│   |    └── labels
+│   |        └── *.txt
+|   |
+│   └── empty
+│        └── images
+│            └── *.txt
+|
+|
+├── siimcovid0-stage1.yaml
+├── siimcovid1-stage1.yaml
+├── siimcovid2-stage1.yaml
+├── siimcovid3-stage1.yaml
+├── siimcovid3-stage1.yaml
+|
+├── siimcovid0-stage2.yaml
+├── siimcovid1-stage2.yaml
+├── siimcovid2-stage2.yaml
+├── siimcovid3-stage2.yaml
+├── siimcovid3-stage2.yaml
