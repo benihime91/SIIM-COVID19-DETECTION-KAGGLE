@@ -8,7 +8,7 @@
 
 
 ## Details
-1. Download the data from [here]() and extract it following the structure mentioned in `data/dataset_structure.txt`
+1. Download the data from [here](https://www.kaggle.com/nischaydnk/siim-data-images) and extract it following the structure mentioned in `data/dataset_structure.txt`
 
 2. Install requirements
     ```bash
@@ -67,7 +67,9 @@
 
     > Note: These notebooks were originally trained on KAGGLE environment so please adjust the dataset and checkpoint paths as required.
 
-    The generated pseduo labels and empty images can be downloaded from [here]() and should be extracted under `data/siim_data` .These should be stored under `data/siim_data/pseudo`. At this stage we also add a few images without annotations under `data/siim_data/empty`.
+    The generated pseduo labels and empty images can be downloaded from [here](https://www.kaggle.com/nischaydnk/siim-data-images) and should be extracted under `data/siim_data` .These should be stored under `data/siim_data/pseudo`. 
+    
+    At this stage we also add a few images without annotations under `data/siim_data/empty`.
 
 5. Train Final Models
 
