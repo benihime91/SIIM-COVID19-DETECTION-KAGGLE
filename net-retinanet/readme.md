@@ -19,7 +19,7 @@
    
     ```bash
     $ git clone https://github.com/open-mmlab/mmdetection.git
-    $ cs mmdetection
+    $ cd mmdetection
 
     $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold0.py
     $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold1.py
@@ -28,7 +28,7 @@
     $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold4.py
     ```
     
-    Logs will be stored under `runs/retinanet_x101_64x4d_fpn_without_empty/fold{}`. You logs should look something similar to logs given under `example_logs`.
+    Logs will be stored under `runs/retinanet_x101_64x4d_fpn_without_empty/fold{}`. Your logs should look something similar to logs given under `example_logs`.
 
 
 The best checkpoints can then be directly replaced with the retinanet weights in our [inference notebook](https://www.kaggle.com/nischaydnk/604e8587410a-v2m-bin-weighted) to obtain our result.
