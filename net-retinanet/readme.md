@@ -1,4 +1,4 @@
-## Instructions for replicating 5 fold retinanet detection model 
+# Instructions for replicating 5 fold retinanet detection model 
 
 1. Download datasets and setup up directory structure
 

@@ -1,0 +1,18 @@
+data
+├── images
+│   ├── 0026720152f5.png
+│   ├── *.png
+│   ├── 000a312787f2.png
+|   ├── *.png
+|
+├── train
+│   ├── 000a312787f2.png
+|   ├── *.png
+|
+├── test
+│   ├── 0026720152f5.png
+│   ├── *.png
+|
+├── meta.csv
+├── grouped_df_with_pseudo_final.csv
+├── grouped_df.csv
