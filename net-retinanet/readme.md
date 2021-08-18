@@ -19,6 +19,7 @@
    
     ```bash
     $ git clone https://github.com/open-mmlab/mmdetection.git
+    $ cs mmdetection
 
     $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold0.py
     $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold1.py
