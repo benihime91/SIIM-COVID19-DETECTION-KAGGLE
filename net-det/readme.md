@@ -60,14 +60,14 @@
 
 3. Generating Pseudo Labels on public test
    
-   Taking the WBF of the best checkpoints of the above models and with the stage1 yolov5 models. We generate psudo labels on the Public Test
+   Taking the WBF of the best checkpoints of the above models and with the stage1 yolov5 models. We generate pseudo labels on the Public Test
    dataset. 
    
    To generate the pseudo labels please refer to the notebooks in `nbs/` folder. 
 
    > Note: These notebooks were originally trained on KAGGLE environment so please adjust the dataset and checkpoint paths as required.
 
-   The generated pseudo labels is already stored in `data/grouped_df_with_pseudo_final.csv`, now tih these annotations we train d3 model again.
+   The generated pseudo labels is already stored in `data/grouped_df_with_pseudo_final.csv`, now with these annotations we train d3 model again.
 
 4. Train d3 with pseudo labels
 
