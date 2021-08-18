@@ -9,11 +9,9 @@
     Images should be extracted under `data/images` and annotations under `data/annotations`
 
 2. Install requirements
-   To train we need to main requirements
+   We need to install the following libraries
    - [mmdetection](https://github.com/open-mmlab/mmdetection)
    - [albumentations](https://github.com/albumentations-team/albumentations)
-  
-  Install these following the instructions given.
 
 3. Training
    
@@ -32,6 +30,3 @@
 
 
 The best checkpoints can then be directly replaced with the retinanet weights in our [inference notebook](https://www.kaggle.com/nischaydnk/604e8587410a-v2m-bin-weighted) to obtain our result.
-
-
-*Note: Original training was done on a single NVIDIA V100 16GB GPU.*
