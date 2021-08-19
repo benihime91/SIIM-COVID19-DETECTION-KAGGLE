@@ -22,7 +22,7 @@ For inference notebooks and model weights, you may visit our final submission [n
 
 ## Hardware
 
-All of our single models were trained using multi v100(local) or single v100(google colab pro) instances with GPU enabled to run all data preprocessing, model training, and inference was done with kaggle noteboks.
+All of our single models were trained using multiple v100(local) or single v100(google colab pro) instances with GPU enabled to run all data preprocessing, model training, and inference was done with kaggle notebooks.
 
 [https://www.kaggle.com/docs/notebooks](https://www.kaggle.com/docs/notebooks)
 
