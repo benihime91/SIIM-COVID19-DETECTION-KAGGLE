@@ -1,4 +1,4 @@
-5th place solution for SIIM-FISABIO-RSNA COVID-19 Detection Challenge
+##5th place solution for SIIM-FISABIO-RSNA COVID-19 Detection Challenge
 
 This documentation outlines how to reproduce the 5th place solution by the "Ayushman Nischay Shivam" team for the covid19 detection competition on Kaggle hosted by SIIM-FISABIO-RSNA.
 
@@ -122,14 +122,16 @@ For None predictions, we noticed that if duplicates are ignored, all none predic
 
 So, our final binary predictions were a weighted average of Efficientnet binary predictions and study-based Efficientnet- v2m(5 fold) **Negative for Pneumonia** predictions whose training was explained above in the study level solution.
 
-<img width="654" alt="Screenshot 2021-08-19 at 6 06 58 PM" src="https://user-images.githubusercontent.com/59060430/130069409-348ecbe5-3959-4100-a828-b4373ae3e336.png">
+<img width="890" alt="Screenshot 2021-08-19 at 7 08 09 PM" src="https://user-images.githubusercontent.com/59060430/130078430-e44eb646-d3f1-456b-ade4-a1a4a8546804.png">
+
 
 ## Efficientnet B6:
 
  - Pretrained imagenet weights were used from timm models. 
- - 640 x 640 image size
+ - 512 x 512 image size
  - average pooling was used in the training and finetune stage.
- - Loss fnc: BCE{Binary} + [0.5* lovasz_loss + 0.5* BCE ]{Segmentation loss} 
+ - We used two separate segmentation heads for binary model efficientnet B6(1st after 3rd Block, 2nd after 6th Block )
+ - Loss fnc: BCE{Binary} + [0.5* lovasz_loss + 0.5* BCE ]{Segmentation loss1} + [0.5* lovasz_loss + 0.5* BCE ]{Segmentation loss2} 
  - Noisy labels were introduced using the out of folds predictions of the efficientnet B6(640 image size) model with the same configs.
  - Ranger optimizer, Cosine Scheduler with warmup were used.
 
