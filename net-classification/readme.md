@@ -19,17 +19,19 @@
 
     Checkpoints of this model will be saved under `runs/exp0/fold_{fold}`
 
-    You will now have configs and checkpoints under `runs/exp0/fold_{fold}`, using these you need to generate the soft labels of this model on the training dataset and save the csv as `data/noisy_01.csv`. Instructions for the same are given in `generate_soft_labels.ipynb` .
+    You will now have configs and checkpoints under `runs/exp0/fold_{fold}`, using these you need to generate the soft labels of this model on the training dataset and save the csv as `data/noisy_00.csv`. Instructions for the same are given in `generate_soft_labels.ipynb` .
 
     Now, we train the following models
 
     ```bash
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_00.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_00.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_00.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_00.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_00.csv
     ```
+
+    We will need to generate the soft labels from the above trained models. Save this as `data/noisy_01.csv`.
 
 
     ```bash

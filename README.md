@@ -190,3 +190,5 @@ As we didn’t use any end-to-end solution and trained models for each level sep
 the idea behind using post-processing was to somehow consume both binary predictions and detection model predictions in a form of ensemble. 
 Due to the high amount of diversity in both types of predictions, we were able to achieve that boost. 
 We tried several types of merge both predictions which include mean, weighted average, geometric mean, etc. Out of which power ensemble outperformed everyone in both public leaderboard and validation score. Therefore, we planned to stick with power ensemble in final submissions.  
+
+Note: For more detailed instructions on generating our solution please look inside the respective folders.
