@@ -1,0 +1,11 @@
+data
+├── *.csv
+|
+├── train
+|    └── *.png
+|
+├── test
+|    └── *.png
+|
+├── masks
+|    └── *.png

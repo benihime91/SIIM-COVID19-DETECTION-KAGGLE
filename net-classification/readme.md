@@ -1,0 +1,48 @@
+# Instructions for replicating Study Models (Classification)
+## Details
+1. Download the images from [here](https://www.kaggle.com/benihime91/siim-covid19-png-1024px) and masks from [here](https://www.kaggle.com/benihime91/siimcovid19masks). Extract it following the structure mentioned in `data/dataset_structure.txt`
+
+2. Install requirements
+    ```bash
+    $ pip install -r requirements.txt
+    ```
+
+3. Training
+
+    ```bash
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/00-v2m-PCAM-DANET-512.yaml --fold 0
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/00-v2m-PCAM-DANET-512.yaml --fold 1
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/00-v2m-PCAM-DANET-512.yaml --fold 2
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/00-v2m-PCAM-DANET-512.yaml --fold 3
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/00-v2m-PCAM-DANET-512.yaml --fold 4
+    ```
+
+    Checkpoints of this model will be saved under `runs/exp0/fold_{fold}`
+
+    You will now have configs and checkpoints under `runs/exp0/fold_{fold}`, using these you need to generate the soft labels of this model on the training dataset and save the csv as `data/noisy_01.csv`. Instructions for the same are given in `generate_soft_labels.ipynb` .
+
+    Now, we train the following models
+
+    ```bash
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+    ```
+
+
+    ```bash
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+
+
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_0/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_1/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_2/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_3/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_4/model_best.pth.tar
+    ```
