@@ -34,6 +34,7 @@ Below are the packages used in addition to the ones included in the default trai
 
 | Package Name | Repository | Kaggle Dataset |
 | --- |--- | --- |
+| pytorch | https://github.com/pytorch/pytorch | |
 | pytorch-lightning | https://github.com/PyTorchLightning/pytorch-lightning | |
 | yacs | https://github.com/rbgirshick/yacs |  |
 | fvcore | https://github.com/facebookresearch/fvcore |  |
