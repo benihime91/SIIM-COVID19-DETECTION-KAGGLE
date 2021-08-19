@@ -111,14 +111,17 @@
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/06-v2l-PCAM-SAM-noisy-640.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/06-v2l-PCAM-SAM-noisy-640.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/06-v2l-PCAM-SAM-noisy-640.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
-
+    ```
+    
+    ```bash
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/07-v2l-PCAM-SAM-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/07-v2l-PCAM-SAM-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/07-v2l-PCAM-SAM-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/07-v2l-PCAM-SAM-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/07-v2l-PCAM-SAM-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+    ```
 
-
+    ```bash
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/08-v2l-PCAM-SAM-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/08-v2l-PCAM-SAM-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
     $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/08-v2l-PCAM-SAM-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
@@ -153,3 +156,23 @@
     ```
 
 
+In our final ensemble we take the following models
+- `runs/exp1/fold_0/model_best.pth.tar`
+- `runs/exp1/fold_1/model_best.pth.tar`
+- `runs/exp1/fold_2/model_best.pth.tar`
+- `runs/exp1/fold_3/model_best.pth.tar`
+- `runs/exp1/fold_4/model_best.pth.tar`
+- `runs/exp2a/fold_1/model_best.pth.tar`
+- `runs/exp2a/fold_3/model_best.pth.tar`
+- `runs/exp2a/fold_4/model_best.pth.tar`
+- `runs/exp3/fold_0/model_best.pth.tar`
+- `runs/exp4a/fold_2/model_best.pth.tar`
+- `runs/exp5b/fold_2/model_best.pth.tar`
+- `runs/exp5b/fold_3/model_best.pth.tar`
+- `runs/exp6/fold_2/model_best.pth.tar`
+- `runs/exp7/fold_3/model_best.pth.tar`
+- `runs/exp8a/fold_4/model_best.pth.tar`
+- `runs/exp9a/fold_0/model_best.pth.tar`
+
+
+The inference code can be found [here](https://www.kaggle.com/nischaydnk/604e8587410a-v2m-bin-weighted).
