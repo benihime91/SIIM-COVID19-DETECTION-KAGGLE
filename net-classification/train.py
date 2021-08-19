@@ -18,13 +18,6 @@ from src.lightning import ModelClass, VerboseCallback
 from src.models import build_model
 from src.utils import colorstr
 
-warnings.filterwarnings("ignore")
-
-torch.backends.cudnn.benchmark = False
-torch.backends.cudnn.enabled = True
-torch.backends.cudnn.deterministic = True
-
-
 def merge_config(args):
     cfg = get_cfg()
     cfg.merge_from_file(args.config_file)
@@ -82,19 +75,17 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     setup_default_logging()
 
-    parser.add_argument(
-        "--config-file", default="", metavar="FILE", help="path to config file"
-    )
+    parser.add_argument("--config-file", default="", metavar="FILE", help="path to config file")
     parser.add_argument("--fold", default=0, type=int, required=True)
-    parser.add_argument(
-        "opts",
-        help="Modify config options by adding 'KEY VALUE' pairs at the end of the command.",
-        default=None,
-        nargs=argparse.REMAINDER,
-    )
-
+    parser.add_argument("--opts", help="Modify config options using the command-line 'KEY VALUE' pairs", default=[], nargs=argparse.REMAINDER)
     args = parser.parse_args()
 
     print(f'{colorstr("Command Line Args: ")}{args}')
-    run(args)
+    
+    warnings.filterwarnings("ignore")
+    
+    torch.backends.cudnn.benchmark     = True
+    torch.backends.cudnn.enabled       = True
+    torch.backends.cudnn.deterministic = True
 
+    run(args)
