@@ -80,6 +80,7 @@ Baseline Architectures used in our final study level solution:
 - Loss fnc: BCE{4-class} + [0.75* lovasz_loss + 0.25* BCE ]{Segmentation loss} 
 - Noisy labels were generated with PCAM pooling + DANET attention map in stage 1.
 - Ranger optimizer, Cosine Scheduler with warmup were used.
+- Activation layers of the model were replaced with Mish activation
 
 
  ## Efficientnet v2l:
@@ -89,6 +90,7 @@ Baseline Architectures used in our final study level solution:
 - Loss fnc: BCE{4-class} + [0.75* lovasz_loss + 0.25* BCE ]{Segmentation loss} 
 - Noisy labels were introduced using the out of folds predictions of the Efficientnet v2m model mentioned above.
 - Ranger optimizer, Cosine Scheduler with warmup were used.
+- Activation layers of the model were replaced with Mish activation
 
 
 ## Efficientnet B5: 
@@ -97,7 +99,7 @@ Baseline Architectures used in our final study level solution:
 - average pooling + sCSE attention map along with multi-head attention was used in the training and finetune stage.
 - Loss fnc: BCE{4-class} + [0.75* lovasz_loss + 0.25* BCE ]{Segmentation loss} 
 - Noisy labels were introduced using the out of folds predictions of the efficientnet B5 model with similar configs.
-- Ranger optimizer, Cosine Scheduler with warmup were used.
+- AdamW optimizer with OneCycleLR scheduling was used.
 
 
  ## Efficientnet B7:
@@ -106,7 +108,7 @@ Baseline Architectures used in our final study level solution:
 - average pooling + sCSE attention map along with multi-head attention was used in the training and finetune stage.
 - Loss fnc: BCE{4-class} + [0.75* lovasz_loss + 0.25* BCE ]{Segmentation loss} 
 - Noisy labels were introduced using the out of folds predictions of the efficientnet B6(640 image size) model with similar configs as of the current model.
-- Ranger optimizer, Cosine Scheduler with warmup were used.
+- AdamW optimizer with OneCycleLR scheduling was used.
 
 
 **As described above for models individually, some of the strategies which were quite common in our models and gave us a good amount of boost were:**
