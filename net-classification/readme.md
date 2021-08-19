@@ -158,24 +158,25 @@
 
 In our final ensemble we take the following models
 
+*v2m models*
 - `runs/exp1/fold_0/model_best.pth.tar`
 - `runs/exp1/fold_1/model_best.pth.tar`
 - `runs/exp1/fold_2/model_best.pth.tar`
 - `runs/exp1/fold_3/model_best.pth.tar`
 - `runs/exp1/fold_4/model_best.pth.tar`
 
-
-- `runs/exp2a/fold_1/model_best.pth.tar`
-- `runs/exp2a/fold_3/model_best.pth.tar`
-- `runs/exp2a/fold_4/model_best.pth.tar`
-- `runs/exp3/fold_0/model_best.pth.tar`
-- `runs/exp4a/fold_2/model_best.pth.tar`
-- `runs/exp5b/fold_2/model_best.pth.tar`
-- `runs/exp5b/fold_3/model_best.pth.tar`
-- `runs/exp6/fold_2/model_best.pth.tar`
-- `runs/exp7/fold_3/model_best.pth.tar`
-- `runs/exp8a/fold_4/model_best.pth.tar`
-- `runs/exp9a/fold_0/model_best.pth.tar`
+*other models*
+* `runs/exp2a/fold_1/model_best.pth.tar`
+* `runs/exp2a/fold_3/model_best.pth.tar`
+* `runs/exp2a/fold_4/model_best.pth.tar`
+* `runs/exp3/fold_0/model_best.pth.tar`
+* `runs/exp4a/fold_2/model_best.pth.tar`
+* `runs/exp5b/fold_2/model_best.pth.tar`
+* `runs/exp5b/fold_3/model_best.pth.tar`
+* `runs/exp6/fold_2/model_best.pth.tar`
+* `runs/exp7/fold_3/model_best.pth.tar`
+* `runs/exp8a/fold_4/model_best.pth.tar`
+* `runs/exp9a/fold_0/model_best.pth.tar`
 
 
 The inference code can be found [here](https://www.kaggle.com/nischaydnk/604e8587410a-v2m-bin-weighted).
