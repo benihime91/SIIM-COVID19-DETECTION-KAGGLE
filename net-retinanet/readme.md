@@ -17,13 +17,12 @@
    
     ```bash
     $ git clone https://github.com/open-mmlab/mmdetection.git
-    $ cd mmdetection
 
-    $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold0.py
-    $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold1.py
-    $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold2.py
-    $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold3.py
-    $ CUDA_VISIBLE_DEVICES=0 python tools/train.py retinanet_x101_64x4d_fpn_siim_fold4.py
+    $ CUDA_VISIBLE_DEVICES=0 python mmdetection/tools/train.py retinanet_x101_64x4d_fpn_siim_fold0.py
+    $ CUDA_VISIBLE_DEVICES=0 python mmdetection/tools/train.py retinanet_x101_64x4d_fpn_siim_fold1.py
+    $ CUDA_VISIBLE_DEVICES=0 python mmdetection/tools/train.py retinanet_x101_64x4d_fpn_siim_fold2.py
+    $ CUDA_VISIBLE_DEVICES=0 python mmdetection/tools/train.py retinanet_x101_64x4d_fpn_siim_fold3.py
+    $ CUDA_VISIBLE_DEVICES=0 python mmdetection/tools/train.py retinanet_x101_64x4d_fpn_siim_fold4.py
     ```
     
     Logs will be stored under `runs/retinanet_x101_64x4d_fpn_without_empty/fold{}`. Your logs should look something similar to logs given under `example_logs`.
