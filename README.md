@@ -2,6 +2,14 @@
 
 This documentation outlines how to reproduce the 5th place solution by the "Ayushman Nischay Shivam" team for the covid19 detection competition on Kaggle hosted by SIIM-FISABIO-RSNA.
 
+
+## Reproduce solution 
+
+For training and replicating our final solution, we have added python scripts for each models (4-class, binary and object detection) in separate folders.
+
+For inference notebooks and model weights, you may visit our final submission [notebook](https://www.kaggle.com/nischaydnk/604e8587410a-v2m-bin-weighted?scriptVersionId=70840526)
+
+
 ## Hardware
 
 All of our single models were trained using multi v100(local) or single v100(google colab pro) instances with GPU enabled to run all data preprocessing, model training, and inference was done with kaggle noteboks.
