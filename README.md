@@ -6,6 +6,12 @@ This documentation outlines how to reproduce the 5th place solution by the "Ayus
 ## Reproduce solution 
 
 For training and replicating our final solution, we have added python scripts for each models (4-class, binary and object detection) in separate folders.
+- [binary models](https://github.com/benihime91/SIIM-COVID19-DETECTION-KAGGLE/tree/main/net-binary)
+- [study models](https://github.com/benihime91/SIIM-COVID19-DETECTION-KAGGLE/tree/main/net-classification)
+- [object detection part 1](https://github.com/benihime91/SIIM-COVID19-DETECTION-KAGGLE/tree/main/net-det)
+- [object detection part 1](https://github.com/benihime91/SIIM-COVID19-DETECTION-KAGGLE/tree/main/net-retinanet)
+- [object detection part 1](https://github.com/benihime91/SIIM-COVID19-DETECTION-KAGGLE/tree/main/net-yolov5)
+
 
 For inference notebooks and model weights, you may visit our final submission [notebook](https://www.kaggle.com/nischaydnk/604e8587410a-v2m-bin-weighted?scriptVersionId=70840526)
 
