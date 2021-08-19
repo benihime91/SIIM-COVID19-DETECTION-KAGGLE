@@ -157,11 +157,14 @@
 
 
 In our final ensemble we take the following models
+
 - `runs/exp1/fold_0/model_best.pth.tar`
 - `runs/exp1/fold_1/model_best.pth.tar`
 - `runs/exp1/fold_2/model_best.pth.tar`
 - `runs/exp1/fold_3/model_best.pth.tar`
 - `runs/exp1/fold_4/model_best.pth.tar`
+
+
 - `runs/exp2a/fold_1/model_best.pth.tar`
 - `runs/exp2a/fold_3/model_best.pth.tar`
 - `runs/exp2a/fold_4/model_best.pth.tar`
