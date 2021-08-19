@@ -3,6 +3,10 @@
 This documentation outlines how to reproduce the 5th place solution by the "Ayushman Nischay Shivam" team for the covid19 detection competition on Kaggle hosted by SIIM-FISABIO-RSNA.
 
 
+## Preprocessing
+You can download the preprcessed data directly as instructed in the respective folders. Nevertheless the code for converting the raw dicoms into png images has been provided in `preprocess.ipynb`
+
+
 ## Reproduce solution 
 
 For training and replicating our final solution, we have added python scripts for each models (4-class, binary and object detection) in separate folders.
@@ -31,14 +35,13 @@ Below are the packages used in addition to the ones included in the default trai
 | Package Name | Repository | Kaggle Dataset |
 | --- |--- | --- |
 | timm- pytorch image models | https://github.com/rwightman/pytorch-image-models | https://www.kaggle.com/kozodoi/timm-pytorch-image-models |
-| pytorch-ranger=0.1.1 |https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer| https://www.kaggle.com/bessenyeiszilrd/rangerdeeplearningoptimizer |
-| efficientdet-pytorch=0.2.3 | https://github.com/rwightman/efficientdet-pytorch | https://www.kaggle.com/sreevishnudamodaran/effdet-latestvinbigdata-wbf-fused |
+| Ranger-Deep-Learning-Optimizer |https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer| https://www.kaggle.com/bessenyeiszilrd/rangerdeeplearningoptimizer |
+| Ranger21 |https://github.com/lessw2020/Ranger21| https://www.kaggle.com/benihime91/ranger21 |
+| Mish-cuda | https://www.kaggle.com/benihime91/mishcuda |https://www.kaggle.com/benihime91/mishcuda |
+| pytorch-toolbelt | https://github.com/BloodAxe/pytorch-toolbelt | https://www.kaggle.com/bloodaxe/pytorch-toolbelt |
 | ensemble-boxes=1.0.4| https://github.com/ZFTurbo/Weighted-Boxes-Fusion | https://www.kaggle.com/vgarshin/ensemble-boxes-104 |
 | MMdetection=2.1.4 | https://github.com/open-mmlab/mmdetection | https://www.kaggle.com/sreevishnudamodaran/mmdetectionv2140|
 | yolov5 |https://github.com/ultralytics/yolov5 | https://www.kaggle.com/benihime91/simmyolov5 |
-| Mish-cuda | https://www.kaggle.com/benihime91/mishcuda |https://www.kaggle.com/benihime91/mishcuda |
-| pytorch-toolbelt | https://github.com/BloodAxe/pytorch-toolbelt | https://www.kaggle.com/bloodaxe/pytorch-toolbelt |
-| radam-pytorch | https://github.com/LiyuanLucasLiu/RAdam | https://www.kaggle.com/lextoumbourou/radampytorch |
 
 
 
