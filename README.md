@@ -4,7 +4,7 @@ This documentation outlines how to reproduce the 5th place solution by the "Ayus
 
 
 ## Preprocessing
-You can download the preprcessed data directly as instructed in the respective folders. Nevertheless the code for converting the raw dicoms into png images has been provided in `preprocess.ipynb`
+You can download the preprocessed data directly as instructed in the respective folders. Nevertheless the code for converting the raw dicoms into png images has been provided in `preprocess.ipynb`
 
 
 ## Reproduce solution 
