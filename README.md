@@ -1,4 +1,4 @@
-##5th place solution for SIIM-FISABIO-RSNA COVID-19 Detection Challenge
+## 5th place solution for SIIM-FISABIO-RSNA COVID-19 Detection Challenge
 
 This documentation outlines how to reproduce the 5th place solution by the "Ayushman Nischay Shivam" team for the covid19 detection competition on Kaggle hosted by SIIM-FISABIO-RSNA.
 
