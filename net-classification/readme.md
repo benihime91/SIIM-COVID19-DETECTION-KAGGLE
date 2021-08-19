@@ -156,7 +156,7 @@
     ```
 
 
-In our final ensemble we take the following models
+4. In our final ensemble we take the following models
 
 *v2m models*
 - `runs/exp1/fold_0/model_best.pth.tar`
