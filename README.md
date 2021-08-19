@@ -34,7 +34,11 @@ Below are the packages used in addition to the ones included in the default trai
 
 | Package Name | Repository | Kaggle Dataset |
 | --- |--- | --- |
-| timm- pytorch image models | https://github.com/rwightman/pytorch-image-models | https://www.kaggle.com/kozodoi/timm-pytorch-image-models |
+| pytorch-lightning | https://github.com/PyTorchLightning/pytorch-lightning | |
+| yacs | https://github.com/rbgirshick/yacs |  |
+| fvcore | https://github.com/facebookresearch/fvcore |  |
+| albumentations | https://github.com/albumentations-team/albumentations |  |
+| pytorch image models | https://github.com/rwightman/pytorch-image-models | https://www.kaggle.com/benihime91/pytorch-image-models |
 | Ranger-Deep-Learning-Optimizer |https://github.com/lessw2020/Ranger-Deep-Learning-Optimizer| https://www.kaggle.com/bessenyeiszilrd/rangerdeeplearningoptimizer |
 | Ranger21 |https://github.com/lessw2020/Ranger21| https://www.kaggle.com/benihime91/ranger21 |
 | Mish-cuda | https://www.kaggle.com/benihime91/mishcuda |https://www.kaggle.com/benihime91/mishcuda |
@@ -42,8 +46,7 @@ Below are the packages used in addition to the ones included in the default trai
 | ensemble-boxes=1.0.4| https://github.com/ZFTurbo/Weighted-Boxes-Fusion | https://www.kaggle.com/vgarshin/ensemble-boxes-104 |
 | MMdetection=2.1.4 | https://github.com/open-mmlab/mmdetection | https://www.kaggle.com/sreevishnudamodaran/mmdetectionv2140|
 | yolov5 |https://github.com/ultralytics/yolov5 | https://www.kaggle.com/benihime91/simmyolov5 |
-
-
+| efficientdet-pytorch | https://github.com/rwightman/efficientdet-pytorch/tree/301487e859fa8160dd3e01b7dbc54d713b392676 | https://www.kaggle.com/benihime91/efficientdetpytorch |
 
 
 
