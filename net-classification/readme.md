@@ -24,25 +24,57 @@
     Now, we train the following models
 
     ```bash
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/01-v2m-PCAM-SAM-bin-study-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
     ```
 
 
     ```bash
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02-v2l-PCAM-SAM-noisy-512.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
 
 
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_0/model_best.pth.tar
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_1/model_best.pth.tar
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_2/model_best.pth.tar
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_3/model_best.pth.tar
-    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/net-classification/configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_4/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_0/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_1/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_2/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_3/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/02a-v2l-PCAM-SAM-noisy-512-finetune.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv --opts CHECKPOINT runs/exp2/fold_4/model_best.pth.tar
+    ```
+
+    ```bash
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/03-v2m-PCAM-SAM-noisy-640.yaml --fold 0 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/03-v2m-PCAM-SAM-noisy-640.yaml --fold 1 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/03-v2m-PCAM-SAM-noisy-640.yaml --fold 2 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/03-v2m-PCAM-SAM-noisy-640.yaml --fold 3 --opts NOISY_CSV data/noisy_01.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/03-v2m-PCAM-SAM-noisy-640.yaml --fold 4 --opts NOISY_CSV data/noisy_01.csv
+    ```
+
+    ```bash
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04-b5-512.yaml --fold 0
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04-b5-512.yaml --fold 1
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04-b5-512.yaml --fold 2
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04-b5-512.yaml --fold 3
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04-b5-512.yaml --fold 4
+    ```
+
+    The above command should save models under `runs/exp4` . Generate soft labels from this model as mentioned above and save it as `data/noisy_02.csv` .
+
+    ```bash
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04a-b5-512-noisy.yaml --fold 0 --opts NOISY_CSV data/noisy_02.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04a-b5-512-noisy.yaml --fold 1 --opts NOISY_CSV data/noisy_02.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04a-b5-512-noisy.yaml --fold 2 --opts NOISY_CSV data/noisy_02.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04a-b5-512-noisy.yaml --fold 3 --opts NOISY_CSV data/noisy_02.csv
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04a-b5-512-noisy.yaml --fold 4 --opts NOISY_CSV data/noisy_02.csv
+
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04b-b5-512-noisy-finetune --fold 0 --opts NOISY_CSV data/noisy_02.csv CHECKPOINT runs/exp4a/fold_0/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04b-b5-512-noisy-finetune --fold 1 --opts NOISY_CSV data/noisy_02.csv CHECKPOINT runs/exp4a/fold_1/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04b-b5-512-noisy-finetune --fold 2 --opts NOISY_CSV data/noisy_02.csv CHECKPOINT runs/exp4a/fold_2/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04b-b5-512-noisy-finetune --fold 3 --opts NOISY_CSV data/noisy_02.csv CHECKPOINT runs/exp4a/fold_3/model_best.pth.tar
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --config configs/04b-b5-512-noisy-finetune --fold 4 --opts NOISY_CSV data/noisy_02.csv CHECKPOINT runs/exp4a/fold_4/model_best.pth.tar
     ```
