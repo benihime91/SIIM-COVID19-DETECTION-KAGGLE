@@ -1,3 +1,4 @@
+![ensemble_classification](https://user-images.githubusercontent.com/38956170/130220092-6a772570-32fd-43aa-b8fc-517bb906dadc.png)
 ## 5th place solution for SIIM-FISABIO-RSNA COVID-19 Detection Challenge
 
 This documentation outlines how to reproduce the 5th place solution by the "Ayushman Nischay Shivam" team for the covid19 detection competition on Kaggle hosted by SIIM-FISABIO-RSNA.
@@ -147,7 +148,8 @@ So, our final binary predictions were a weighted average of Efficientnet binary 
 
 ## Classification models based Ensemble{None + multiclass}:
 
-<img width="658" alt="Screenshot 2021-08-19 at 6 08 45 PM" src="https://user-images.githubusercontent.com/59060430/130069640-d84e6b9d-7a34-41ab-b86c-f144339a9d0e.png">
+![ensemble_classification](https://user-images.githubusercontent.com/38956170/130220182-09bb2035-1e8f-4528-aece-33bd7f1a3be1.png)
+
 
 
 **Study Level:** We simply took the mean of 11 models predictions for each class based on their fold-wise results and ensemble boost. Further, they were blended with efficientnet v2m(5 fold) with weights 0.85 - 0.15.
