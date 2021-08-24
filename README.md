@@ -1,4 +1,3 @@
-![ensemble_classification](https://user-images.githubusercontent.com/38956170/130220092-6a772570-32fd-43aa-b8fc-517bb906dadc.png)
 ## 5th place solution for SIIM-FISABIO-RSNA COVID-19 Detection Challenge
 
 This documentation outlines how to reproduce the 5th place solution by the "Ayushman Nischay Shivam" team for the covid19 detection competition on Kaggle hosted by SIIM-FISABIO-RSNA.
