@@ -189,7 +189,7 @@ class PcamPoolHead(nn.Module):
             for _ in range(cfg.MODEL.HEAD.MULTI_DROPOUT.NUM):
                 self.dropout.append(nn.Dropout2d(cfg.MODEL.HEAD.DROPOUT))
         else:
-        self.multi_drop = False
+            self.multi_drop = False
 
     def _init_classifier(self):
         for index, num_class in enumerate(self.num_classes):
